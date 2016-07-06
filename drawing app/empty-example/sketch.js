@@ -13,27 +13,33 @@ createCanvas(600,460);
 
 function draw() {
 
-background(150,150,150);
+
 //ellipse
 
 fill(greeX,400,0);
-ellipse(circleX,200,xwidth,yheight);
+ellipse(circleX,mouseY,xwidth,yheight);
 
-circleX = circleX + .5;
+circleX = mouseX
 greeX = greeX + .5;
-yheight= yheight + .5;
-xwidth = xwidth+.5;
+yheight= yheight ;
+xwidth = xwidth;
 
 
+if (mouseIsPressed) {
 
-
-
+    ellipse(mouseX,mouseY,xwidth,yheight);
+    yheight = 100;
+	xwidth =100;
+	noStroke();
+  } 
 
 
 }
 
-function mousePressed(){
+function mouseIsPressed(){
 	background(150,150,150);
+	
+
 
 
 
